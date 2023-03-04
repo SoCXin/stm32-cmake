@@ -1,6 +1,6 @@
 # About
 
-![Tests](https://github.com/ObKo/stm32-cmake/workflows/Tests/badge.svg)
+![Tests](https://github.com/SoCXin/stm32-cmake/workflows/cmake/badge.svg)
 
 This project is used to develop applications for the STM32 - ST's ARM Cortex-Mx MCUs.
 It uses cmake and GCC, along with newlib (libc), STM32Cube. Supports F0 F1 F2 F3 F4 F7 G0 G4 H7 L0 L1 L4 L5 U5 WB WL device families.
@@ -306,7 +306,7 @@ For the multi-core architectures, both family and core need to be specified like
 example above.
 
 The following FreeRTOS ports are supported in general: `ARM_CM0`, `ARM_CM3`,
-`ARM_CM3_MPU`, `ARM_CM4F`, `ARM_CM4_MPU`, `ARM_CM7`, `ARM_CM7_MPU`, 
+`ARM_CM3_MPU`, `ARM_CM4F`, `ARM_CM4_MPU`, `ARM_CM7`, `ARM_CM7_MPU`,
 `ARM_CM23`, `ARM_CM23_NTZ`, `ARM_CM33`, `ARM_CM33_NTZ`.
 
 Other FreeRTOS libraries, with `FREERTOS_NAMESPACE` being set as specified in the examples above:

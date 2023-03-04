@@ -1,4 +1,4 @@
-name: Tests
+name: cmake
 
 on: [push, pull_request]
 
@@ -8,7 +8,7 @@ env:
 
 jobs:
   test-ubuntu:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         family: [F0, F1, F2, F3, F4, F7, G0, G4, H7, L0, L1, L4, L5, U5, WB, WL, MP1]
@@ -16,9 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
+
     - name: Install ARM toolchain
-      run: sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi 
+      run: sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
 
     - name: Create build directory for tests/fetch
       run: cmake -E make_directory ${{runner.workspace}}/tests/fetch/build
